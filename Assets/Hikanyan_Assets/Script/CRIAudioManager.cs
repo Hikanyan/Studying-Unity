@@ -5,9 +5,9 @@ using CriWare;
 public class CRIAudioManager : MonoBehaviour
 {
     public static CRIAudioManager instance;
-    [SerializeField] string _streamingAssetsPathACF = "";
+    [SerializeField] string _streamingAssetsPathACF = "Studying Unity";
     [SerializeField] string _cueSheetBGM = "CueSheet_BGM";//.acb
-    [SerializeField] string _cueSheetSE = "CueSheet_SE";//.acb
+    //[SerializeField] string _cueSheetSE = "CueSheet_SE";//.acb
 
     [SerializeField, Range(0f, 1f)] float _bgmPlayVolume = default;
     [SerializeField, Range(0f, 1f)] float _sePlayVolume = default;
@@ -40,15 +40,15 @@ public class CRIAudioManager : MonoBehaviour
             // BGM acbí«â¡
             CriAtom.AddCueSheet(_cueSheetBGM, $"{_cueSheetBGM}.acb", null, null);
             // SE acbí«â¡
-            CriAtom.AddCueSheet(_cueSheetSE, $"{_cueSheetSE}.acb", null, null);
+            //CriAtom.AddCueSheet(_cueSheetSE, $"{_cueSheetSE}.acb", null, null);
 
 
             //BGMópÇÃCriAtomSourceÇçÏê¨
             _criAtomSourceBgm = gameObject.AddComponent<CriAtomSource>();
             _criAtomSourceBgm.cueSheet = _cueSheetBGM;
             //SEópÇÃCriAtomSourceÇçÏê¨
-            _criAtomSourceSe = gameObject.AddComponent<CriAtomSource>();
-            _criAtomSourceSe.cueSheet = _cueSheetSE;
+            //_criAtomSourceSe = gameObject.AddComponent<CriAtomSource>();
+            //_criAtomSourceSe.cueSheet = _cueSheetSE;
 
             DontDestroyOnLoad(gameObject);
         }
