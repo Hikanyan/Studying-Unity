@@ -64,5 +64,9 @@ public class CinemachineTargetController : MonoBehaviour
     {
 
     }
+    void SetCursorSrate(bool Srate)
+    {
+        Cursor.lockState = Srate ? CursorLockMode.Locked : CursorLockMode.None;
+    }
 
 }

@@ -39,6 +39,10 @@ public class PlayerBaseController : MonoBehaviour
     public LayerMask _groundLayers;
 
     // player
+    private PlayerInput _playerInput;
+    private Rigidbody _rb;
+    private bool _jump;
+    private bool _sprint;
     private float _speed;
     private float _animationBlend;
     private float _targetRotation = 0.0f;
@@ -53,5 +57,22 @@ public class PlayerBaseController : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _playerInput = GetComponent<PlayerInput>();
     }
+    private void Update()
+    {
+        
+    }
+
+    void PlayerMove()
+    {
+        //ëñÇÈë¨ìxê›íË
+        float targetSpeed = _sprint ? _sprintSpeed : _moveSpeed;
+        
+    }
+    void PlayerAnimation()
+    {
+
+    }
+
 }
