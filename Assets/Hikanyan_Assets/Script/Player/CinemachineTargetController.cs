@@ -52,13 +52,11 @@ public class CinemachineTargetController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            SetCursorSrate(false);
         }
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            SetCursorSrate(true);
         }
     }
 

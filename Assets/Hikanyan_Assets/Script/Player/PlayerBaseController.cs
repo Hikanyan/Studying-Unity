@@ -50,5 +50,8 @@ public class PlayerBaseController : MonoBehaviour
     private float _jumpTimeoutDelta;
     private float _fallTimeoutDelta;
 
-
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
 }
