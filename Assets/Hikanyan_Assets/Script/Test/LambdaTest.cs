@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,5 +23,13 @@ public class LambdaTest : MonoBehaviour
     private void Test(string argText)
     {
         Debug.Log(argText+"é¿çs");
+    }
+    void Test1(Action onComplete)
+    {
+        Debug.Log("Test1");
+        if(onComplete == null)
+        {
+            onComplete();
+        }
     }
 }
