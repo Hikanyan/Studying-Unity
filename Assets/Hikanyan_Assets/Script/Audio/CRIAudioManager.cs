@@ -23,6 +23,8 @@ public class CRIAudioManager : MonoBehaviour
 
     bool isPlay = false;
 
+    [SerializeField] int _index = 0;
+
     private void Awake()
     {
         if (instance == null)
@@ -62,6 +64,8 @@ public class CRIAudioManager : MonoBehaviour
     {
         //ゲーム内プレビュー用のレベルモニター機能を追加
         CriAtom.SetBusAnalyzer(true);
+
+        CRIPlayBGM(_index);
     }
 
     public void CRIPlayBGM(int index)
